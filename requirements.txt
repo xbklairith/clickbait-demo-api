@@ -3,3 +3,5 @@ numpy
 keras
 gunicorn
 ipython
+tensorflow
+h5py
