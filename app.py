@@ -7,10 +7,11 @@ from keras.models import load_model
 model = load_model('char_m1_model.h5')
 model.load_weights('char_m1_weights.h5')
 maxlen=150
-len_chars=191
+
 with open('charmap.pickle', 'rb') as handle:
     char_indices, indices_char = pickle.load(handle)
 
+len_chars=len(char_indices)
 
 def text2input(text_str):
     output = np.zeros((1, maxlen, len_chars), dtype=np.bool)
